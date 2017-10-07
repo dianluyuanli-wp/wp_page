@@ -1,5 +1,5 @@
 // 引入编写好的api
-var api = require('./api'); 
+//var api = require('./api'); 
 // 引入文件模块
 var fs = require('fs');
 // 引入处理路径的模块
@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/dist'));
 app.set('views', __dirname + '/dist');
 app.set('view engine', 'ejs');
 
-app.post('/api/setup', function (req, res) {
+/*app.post('/api/setup', function (req, res) {
   new db.User(req.body)
     .save()
     .then(() => {
@@ -31,7 +31,7 @@ app.post('/api/setup', function (req, res) {
       db.initialized = true
     })
     .catch(() => res.status(500).end())
-})
+})*/
 
 app.get('/', function(request, response) {
   response.render('index');
